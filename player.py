@@ -67,6 +67,7 @@ class player(Thread):
     
     def stop(self):
         self.playing = False
+        self.pause_music()
     
     def pause_track(self):
         self.paused = True
@@ -116,4 +117,4 @@ if __name__ == "__main__":
     print("exiting")
     
     p.stop()
-    p.pause_music()
+    p.join()
